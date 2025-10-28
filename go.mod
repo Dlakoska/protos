@@ -1,4 +1,3 @@
-
-module github.com/Dlakoska/protos
+module protos
 
 go 1.24
