@@ -8,6 +8,8 @@ service Auth {
   rpc Register (RegisterRequest) returns (RegisterResponse);
   rpc Login (LoginRequest) returns (LoginResponse);
   rpc IsAdmin (IsAdminRequest) returns (IsAdminResponse);
+  rpc ChangeEmail (ChangeEmailRequest) returns (ChangeEmailResponse);
+  rpc ResetPassword (ResetPasswordRequest) returns (ResetPasswordResponse);
 }
 
 message RegisterRequest {
@@ -37,3 +39,20 @@ message IsAdminResponse{
   bool is_admin = 1;
 }
 
+message ChangeEmailRequest{
+  string old_email = 1;
+  string password = 2;
+  string new_email = 3;
+}
+
+message ChangeEmailResponse{
+  string new_email = 1;
+}
+
+message ResetPasswordRequest{
+  string email = 1;
+}
+
+message ResetPasswordResponse{
+  bool email_sent = 1;
+}
