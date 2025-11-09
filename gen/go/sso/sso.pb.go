@@ -312,8 +312,7 @@ func (x *IsAdminResponse) GetIsAdmin() bool {
 type ChangeEmailRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	OldEmail      string                 `protobuf:"bytes,1,opt,name=old_email,json=oldEmail,proto3" json:"old_email,omitempty"`
-	Password      string                 `protobuf:"bytes,2,opt,name=password,proto3" json:"password,omitempty"`
-	NewEmail      string                 `protobuf:"bytes,3,opt,name=new_email,json=newEmail,proto3" json:"new_email,omitempty"`
+	NewEmail      string                 `protobuf:"bytes,2,opt,name=new_email,json=newEmail,proto3" json:"new_email,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -351,13 +350,6 @@ func (*ChangeEmailRequest) Descriptor() ([]byte, []int) {
 func (x *ChangeEmailRequest) GetOldEmail() string {
 	if x != nil {
 		return x.OldEmail
-	}
-	return ""
-}
-
-func (x *ChangeEmailRequest) GetPassword() string {
-	if x != nil {
-		return x.Password
 	}
 	return ""
 }
@@ -520,11 +512,10 @@ const file_sso_sso_proto_rawDesc = "" +
 	"\x0eIsAdminRequest\x12\x17\n" +
 	"\auser_id\x18\x01 \x01(\x03R\x06userId\",\n" +
 	"\x0fIsAdminResponse\x12\x19\n" +
-	"\bis_admin\x18\x01 \x01(\bR\aisAdmin\"j\n" +
+	"\bis_admin\x18\x01 \x01(\bR\aisAdmin\"N\n" +
 	"\x12ChangeEmailRequest\x12\x1b\n" +
-	"\told_email\x18\x01 \x01(\tR\boldEmail\x12\x1a\n" +
-	"\bpassword\x18\x02 \x01(\tR\bpassword\x12\x1b\n" +
-	"\tnew_email\x18\x03 \x01(\tR\bnewEmail\"2\n" +
+	"\told_email\x18\x01 \x01(\tR\boldEmail\x12\x1b\n" +
+	"\tnew_email\x18\x02 \x01(\tR\bnewEmail\"2\n" +
 	"\x13ChangeEmailResponse\x12\x1b\n" +
 	"\tnew_email\x18\x01 \x01(\tR\bnewEmail\",\n" +
 	"\x14ResetPasswordRequest\x12\x14\n" +

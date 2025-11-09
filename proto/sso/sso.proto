@@ -41,8 +41,7 @@ message IsAdminResponse{
 
 message ChangeEmailRequest{
   string old_email = 1;
-  string password = 2;
-  string new_email = 3;
+  string new_email = 2;
 }
 
 message ChangeEmailResponse{
