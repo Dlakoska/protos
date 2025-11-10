@@ -10,6 +10,9 @@ service Auth {
   rpc IsAdmin (IsAdminRequest) returns (IsAdminResponse);
   rpc ChangeEmail (ChangeEmailRequest) returns (ChangeEmailResponse);
   rpc ResetPassword (ResetPasswordRequest) returns (ResetPasswordResponse);
+  rpc CreateAdmin(CreateAdminRequest) returns (CreateAdminResponse);
+  rpc DemoteAdmin(DemoteAdminRequest) returns (DemoteAdminResponse);
+  rpc CreateApp(CreateAppRequest) returns (CreateAppResponse);
 }
 
 message RegisterRequest {
@@ -54,4 +57,29 @@ message ResetPasswordRequest{
 
 message ResetPasswordResponse{
   bool email_sent = 1;
+}
+
+message CreateAdminRequest{
+  int64 id = 1;
+}
+
+message CreateAdminResponse{
+  string message = 1;
+}
+
+message DemoteAdminRequest{
+  int64 id = 1;
+}
+
+message DemoteAdminResponse{
+  string message = 1;
+}
+
+message CreateAppRequest{
+  string name = 1;
+  string secret = 2;
+}
+
+message CreateAppResponse{
+  int64 id = 1;
 }
