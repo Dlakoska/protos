@@ -493,6 +493,198 @@ func (x *ResetPasswordResponse) GetEmailSent() bool {
 	return false
 }
 
+type CreateDemoteAdminRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Id            int64                  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Admin         bool                   `protobuf:"varint,2,opt,name=admin,proto3" json:"admin,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CreateDemoteAdminRequest) Reset() {
+	*x = CreateDemoteAdminRequest{}
+	mi := &file_sso_sso_proto_msgTypes[10]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CreateDemoteAdminRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateDemoteAdminRequest) ProtoMessage() {}
+
+func (x *CreateDemoteAdminRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_sso_sso_proto_msgTypes[10]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateDemoteAdminRequest.ProtoReflect.Descriptor instead.
+func (*CreateDemoteAdminRequest) Descriptor() ([]byte, []int) {
+	return file_sso_sso_proto_rawDescGZIP(), []int{10}
+}
+
+func (x *CreateDemoteAdminRequest) GetId() int64 {
+	if x != nil {
+		return x.Id
+	}
+	return 0
+}
+
+func (x *CreateDemoteAdminRequest) GetAdmin() bool {
+	if x != nil {
+		return x.Admin
+	}
+	return false
+}
+
+type CreateDemoteAdminResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Message       string                 `protobuf:"bytes,1,opt,name=message,proto3" json:"message,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CreateDemoteAdminResponse) Reset() {
+	*x = CreateDemoteAdminResponse{}
+	mi := &file_sso_sso_proto_msgTypes[11]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CreateDemoteAdminResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateDemoteAdminResponse) ProtoMessage() {}
+
+func (x *CreateDemoteAdminResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_sso_sso_proto_msgTypes[11]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateDemoteAdminResponse.ProtoReflect.Descriptor instead.
+func (*CreateDemoteAdminResponse) Descriptor() ([]byte, []int) {
+	return file_sso_sso_proto_rawDescGZIP(), []int{11}
+}
+
+func (x *CreateDemoteAdminResponse) GetMessage() string {
+	if x != nil {
+		return x.Message
+	}
+	return ""
+}
+
+type CreateAppRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Name          string                 `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Secret        string                 `protobuf:"bytes,2,opt,name=secret,proto3" json:"secret,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CreateAppRequest) Reset() {
+	*x = CreateAppRequest{}
+	mi := &file_sso_sso_proto_msgTypes[12]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CreateAppRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateAppRequest) ProtoMessage() {}
+
+func (x *CreateAppRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_sso_sso_proto_msgTypes[12]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateAppRequest.ProtoReflect.Descriptor instead.
+func (*CreateAppRequest) Descriptor() ([]byte, []int) {
+	return file_sso_sso_proto_rawDescGZIP(), []int{12}
+}
+
+func (x *CreateAppRequest) GetName() string {
+	if x != nil {
+		return x.Name
+	}
+	return ""
+}
+
+func (x *CreateAppRequest) GetSecret() string {
+	if x != nil {
+		return x.Secret
+	}
+	return ""
+}
+
+type CreateAppResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Id            int64                  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CreateAppResponse) Reset() {
+	*x = CreateAppResponse{}
+	mi := &file_sso_sso_proto_msgTypes[13]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CreateAppResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateAppResponse) ProtoMessage() {}
+
+func (x *CreateAppResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_sso_sso_proto_msgTypes[13]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateAppResponse.ProtoReflect.Descriptor instead.
+func (*CreateAppResponse) Descriptor() ([]byte, []int) {
+	return file_sso_sso_proto_rawDescGZIP(), []int{13}
+}
+
+func (x *CreateAppResponse) GetId() int64 {
+	if x != nil {
+		return x.Id
+	}
+	return 0
+}
+
 var File_sso_sso_proto protoreflect.FileDescriptor
 
 const file_sso_sso_proto_rawDesc = "" +
@@ -522,13 +714,25 @@ const file_sso_sso_proto_rawDesc = "" +
 	"\x05email\x18\x01 \x01(\tR\x05email\"6\n" +
 	"\x15ResetPasswordResponse\x12\x1d\n" +
 	"\n" +
-	"email_sent\x18\x01 \x01(\bR\temailSent2\xb9\x02\n" +
+	"email_sent\x18\x01 \x01(\bR\temailSent\"@\n" +
+	"\x18CreateDemoteAdminRequest\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\x03R\x02id\x12\x14\n" +
+	"\x05admin\x18\x02 \x01(\bR\x05admin\"5\n" +
+	"\x19CreateDemoteAdminResponse\x12\x18\n" +
+	"\amessage\x18\x01 \x01(\tR\amessage\">\n" +
+	"\x10CreateAppRequest\x12\x12\n" +
+	"\x04name\x18\x01 \x01(\tR\x04name\x12\x16\n" +
+	"\x06secret\x18\x02 \x01(\tR\x06secret\"#\n" +
+	"\x11CreateAppResponse\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\x03R\x02id2\xcd\x03\n" +
 	"\x04Auth\x129\n" +
 	"\bRegister\x12\x15.auth.RegisterRequest\x1a\x16.auth.RegisterResponse\x120\n" +
 	"\x05Login\x12\x12.auth.LoginRequest\x1a\x13.auth.LoginResponse\x126\n" +
 	"\aIsAdmin\x12\x14.auth.IsAdminRequest\x1a\x15.auth.IsAdminResponse\x12B\n" +
 	"\vChangeEmail\x12\x18.auth.ChangeEmailRequest\x1a\x19.auth.ChangeEmailResponse\x12H\n" +
-	"\rResetPassword\x12\x1a.auth.ResetPasswordRequest\x1a\x1b.auth.ResetPasswordResponseB\x14Z\x12titov.sso.v1;ssov1b\x06proto3"
+	"\rResetPassword\x12\x1a.auth.ResetPasswordRequest\x1a\x1b.auth.ResetPasswordResponse\x12T\n" +
+	"\x11CreateDemoteAdmin\x12\x1e.auth.CreateDemoteAdminRequest\x1a\x1f.auth.CreateDemoteAdminResponse\x12<\n" +
+	"\tCreateApp\x12\x16.auth.CreateAppRequest\x1a\x17.auth.CreateAppResponseB\x14Z\x12titov.sso.v1;ssov1b\x06proto3"
 
 var (
 	file_sso_sso_proto_rawDescOnce sync.Once
@@ -542,35 +746,43 @@ func file_sso_sso_proto_rawDescGZIP() []byte {
 	return file_sso_sso_proto_rawDescData
 }
 
-var file_sso_sso_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
+var file_sso_sso_proto_msgTypes = make([]protoimpl.MessageInfo, 14)
 var file_sso_sso_proto_goTypes = []any{
-	(*RegisterRequest)(nil),       // 0: auth.RegisterRequest
-	(*RegisterResponse)(nil),      // 1: auth.RegisterResponse
-	(*LoginRequest)(nil),          // 2: auth.LoginRequest
-	(*LoginResponse)(nil),         // 3: auth.LoginResponse
-	(*IsAdminRequest)(nil),        // 4: auth.IsAdminRequest
-	(*IsAdminResponse)(nil),       // 5: auth.IsAdminResponse
-	(*ChangeEmailRequest)(nil),    // 6: auth.ChangeEmailRequest
-	(*ChangeEmailResponse)(nil),   // 7: auth.ChangeEmailResponse
-	(*ResetPasswordRequest)(nil),  // 8: auth.ResetPasswordRequest
-	(*ResetPasswordResponse)(nil), // 9: auth.ResetPasswordResponse
+	(*RegisterRequest)(nil),           // 0: auth.RegisterRequest
+	(*RegisterResponse)(nil),          // 1: auth.RegisterResponse
+	(*LoginRequest)(nil),              // 2: auth.LoginRequest
+	(*LoginResponse)(nil),             // 3: auth.LoginResponse
+	(*IsAdminRequest)(nil),            // 4: auth.IsAdminRequest
+	(*IsAdminResponse)(nil),           // 5: auth.IsAdminResponse
+	(*ChangeEmailRequest)(nil),        // 6: auth.ChangeEmailRequest
+	(*ChangeEmailResponse)(nil),       // 7: auth.ChangeEmailResponse
+	(*ResetPasswordRequest)(nil),      // 8: auth.ResetPasswordRequest
+	(*ResetPasswordResponse)(nil),     // 9: auth.ResetPasswordResponse
+	(*CreateDemoteAdminRequest)(nil),  // 10: auth.CreateDemoteAdminRequest
+	(*CreateDemoteAdminResponse)(nil), // 11: auth.CreateDemoteAdminResponse
+	(*CreateAppRequest)(nil),          // 12: auth.CreateAppRequest
+	(*CreateAppResponse)(nil),         // 13: auth.CreateAppResponse
 }
 var file_sso_sso_proto_depIdxs = []int32{
-	0, // 0: auth.Auth.Register:input_type -> auth.RegisterRequest
-	2, // 1: auth.Auth.Login:input_type -> auth.LoginRequest
-	4, // 2: auth.Auth.IsAdmin:input_type -> auth.IsAdminRequest
-	6, // 3: auth.Auth.ChangeEmail:input_type -> auth.ChangeEmailRequest
-	8, // 4: auth.Auth.ResetPassword:input_type -> auth.ResetPasswordRequest
-	1, // 5: auth.Auth.Register:output_type -> auth.RegisterResponse
-	3, // 6: auth.Auth.Login:output_type -> auth.LoginResponse
-	5, // 7: auth.Auth.IsAdmin:output_type -> auth.IsAdminResponse
-	7, // 8: auth.Auth.ChangeEmail:output_type -> auth.ChangeEmailResponse
-	9, // 9: auth.Auth.ResetPassword:output_type -> auth.ResetPasswordResponse
-	5, // [5:10] is the sub-list for method output_type
-	0, // [0:5] is the sub-list for method input_type
-	0, // [0:0] is the sub-list for extension type_name
-	0, // [0:0] is the sub-list for extension extendee
-	0, // [0:0] is the sub-list for field type_name
+	0,  // 0: auth.Auth.Register:input_type -> auth.RegisterRequest
+	2,  // 1: auth.Auth.Login:input_type -> auth.LoginRequest
+	4,  // 2: auth.Auth.IsAdmin:input_type -> auth.IsAdminRequest
+	6,  // 3: auth.Auth.ChangeEmail:input_type -> auth.ChangeEmailRequest
+	8,  // 4: auth.Auth.ResetPassword:input_type -> auth.ResetPasswordRequest
+	10, // 5: auth.Auth.CreateDemoteAdmin:input_type -> auth.CreateDemoteAdminRequest
+	12, // 6: auth.Auth.CreateApp:input_type -> auth.CreateAppRequest
+	1,  // 7: auth.Auth.Register:output_type -> auth.RegisterResponse
+	3,  // 8: auth.Auth.Login:output_type -> auth.LoginResponse
+	5,  // 9: auth.Auth.IsAdmin:output_type -> auth.IsAdminResponse
+	7,  // 10: auth.Auth.ChangeEmail:output_type -> auth.ChangeEmailResponse
+	9,  // 11: auth.Auth.ResetPassword:output_type -> auth.ResetPasswordResponse
+	11, // 12: auth.Auth.CreateDemoteAdmin:output_type -> auth.CreateDemoteAdminResponse
+	13, // 13: auth.Auth.CreateApp:output_type -> auth.CreateAppResponse
+	7,  // [7:14] is the sub-list for method output_type
+	0,  // [0:7] is the sub-list for method input_type
+	0,  // [0:0] is the sub-list for extension type_name
+	0,  // [0:0] is the sub-list for extension extendee
+	0,  // [0:0] is the sub-list for field type_name
 }
 
 func init() { file_sso_sso_proto_init() }
@@ -584,7 +796,7 @@ func file_sso_sso_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_sso_sso_proto_rawDesc), len(file_sso_sso_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   10,
+			NumMessages:   14,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
